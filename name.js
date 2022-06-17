@@ -4,7 +4,7 @@
 const e = React.createElement;
 
 function getRandom(items) {
-  return items[Math.floor(Math.random()*items.length)];
+  return <h1>items[Math.floor(Math.random()*items.length)]</h1>;
 }
 
 const Button = ({name, onClick, children}) => {
