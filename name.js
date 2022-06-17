@@ -17,7 +17,9 @@ class App extends React.Component {
   
   constructor(props) {
     super(props);
-    this.state = { firstName: '', };
+    this.state = { 
+      firstName: '', 
+    };
   }
 
   componentWillMount() {
@@ -49,7 +51,7 @@ class App extends React.Component {
           </div>
         </div>
         <div className="m-y">
-          <button className="btn btn-random" onClick={this._randomAll.bind(this)}>My name is</button>
+          <button className="btn btn-random" onClick={this._randomAll.bind(this)}>is my name</button>
         </div>
         <small className="randomize-note">Click</small>
         <Button name="firstName" onClick={this.handleGetNameClick}>First name</Button>
@@ -59,8 +61,7 @@ class App extends React.Component {
 }
 
 const nameData = {
-	"firstName": [
-		"callista", "calida", "cele", "cecelia", "cardea", "celesta", "casta", "clora", "cyrilla", "cyra", "cesira", "caria", "celia", "coretta", "cora", "clea", "calise", "cali", "cleo", "celena", "cleta", "coleta", "cressida", "ceres", "cyrena", "calida", "cuora", "camila", "clara", "costa", "carina", "ciel", "cara", "cerelia", "carria", "cira", "cinzia", "celeste", "lira", "cora", "celica", "celsa", "malva", "corradea", "cira", "cereal"
+	"firstName": ["callista", "calida", "cele", "cecelia", "cardea", "celesta", "casta", "clora", "cyrilla", "cyra", "cesira", "caria", "celia", "coretta", "cora", "clea", "calise", "cali", "cleo", "celena", "cleta", "coleta", "cressida", "ceres", "cyrena", "calida", "cuora", "camila", "clara", "costa", "carina", "ciel", "cara", "cerelia", "carria", "cira", "cinzia", "celeste", "lira", "cora", "celica", "celsa", "malva", "corradea", "cira", "cereal"
 	]
 }
 
