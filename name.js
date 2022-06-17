@@ -1,3 +1,8 @@
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.5/clipboard.min.js" crossorigin></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js" crossorigin></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js" crossorigin></script>
 function getRandom(items) {
   return items[Math.floor(Math.random()*items.length)];
 }
