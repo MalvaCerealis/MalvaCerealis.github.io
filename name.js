@@ -1,3 +1,5 @@
+'use strict';
+const e = React.createElement;
 function getRandom(items) {
   return items[Math.floor(Math.random()*items.length)];
 }
@@ -12,9 +14,7 @@ class App extends React.Component {
   
   constructor(props) {
     super(props);
-    this.state = {
-      firstName: '',
-    };
+    this.state = { firstName: '', };
   }
 
   componentWillMount() {
@@ -61,5 +61,6 @@ const nameData = {
 	]
 }
 
-
-ReactDOM.render(<App />, document.getElementById('name'))
+const domContainer = document.querySelector('name_container');
+const root = ReactDOM.createRoot(domContainer);
+root.render(e(App));
