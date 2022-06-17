@@ -64,6 +64,6 @@ const nameData = {
 	]
 }
 
-const domContainer = document.querySelector('name_container');
+const domContainer = document.querySelector('#name_container');
 const root = ReactDOM.createRoot(domContainer);
 root.render(e(App));
