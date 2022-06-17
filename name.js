@@ -1,5 +1,8 @@
 'use strict';
+
+
 const e = React.createElement;
+
 function getRandom(items) {
   return items[Math.floor(Math.random()*items.length)];
 }
