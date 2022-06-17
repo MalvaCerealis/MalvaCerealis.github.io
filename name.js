@@ -1,47 +1,5 @@
-<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.5/clipboard.min.js" crossorigin></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js" crossorigin></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js" crossorigin></script>
 function getRandom(items) {
   return items[Math.floor(Math.random()*items.length)];
-}
-
-class ClipboardCopier extends React.Component {
-  constructor(props) { 
-    super(props);
-    this.state = {
-      copied: false
-    }
-  }
-  
-  componentDidMount() {
-    const clipboard = new Clipboard('.btn-copy', {
-      text: function() {
-        return document.querySelector('#name').value;
-      }
-    });
-    
-    clipboard.on('success', (e) => {
-      this.setState({
-        copied: true
-      })
-      
-      setTimeout(() => this.setState({copied: false}), 1000);
-    });
-  }
-  
-  render() {
-    const {value} = this.props;
-    const {copied} = this.state;
-    
-    return (
-      <div>
-        <input type="hidden" id="name" value={value} />
-        <button disabled={copied} className="btn btn-copy">{copied ? 'Copied!' : 'Copy to clipboard'}</button>
-      </div>
-    )
-  }
 }
 
 const Button = ({name, onClick, children}) => {
@@ -87,7 +45,6 @@ class App extends React.Component {
             <br />
           </div>
         </div>
-        <ClipboardCopier value={firstName} />
         <div className="m-y">
           <button className="btn btn-random" onClick={this._randomAll.bind(this)}>My name is</button>
         </div>
