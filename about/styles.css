@@ -1,0 +1,119 @@
+:root {
+    --header-bg:#A6BC8F;
+    --nav-bg:#A6BC8F;
+    --article-bg:#DAC5A4;
+    --aside-bg:#A6BC8F;
+    --border-color:#E0E0E0;
+    --sidebar-text-color:#265c23;
+    --article-text-color:#0c1d0b;
+    --article-heading-color:#0c1d0b;
+    --nav-link-color: #1E4A1C;
+    --darker-border-color:#C6C6C6;
+  }
+@font-face {
+    font-family:"cool";
+    src: url("/fonts/ADD.ttf") format("truetype");
+    font-family:"rs";
+    src: url("/fonts/runescape.ttf") format("truetype");
+  }
+html {font-family: "Trebuchet MS", sans-serif;padding:0;margin:0;}
+title {font-family:"cool";}
+body {font-size:16px;background-color: #e9dcc9;padding:0;margin:0;}
+h1   {color: #265c23; text-align: center;font-size:50px;}
+h2   {color: #265c23; text-align: center;}
+p    {color:#265c23;padding-left:30px;}
+a   {color:  #1E4A1C;}
+img {display:block;margin: 0 auto;max-width:100%;height:auto;}
+audio {display:block; margin:0 auto;}
+#frame {display:block; margin: 0 auto;}
+#frame2 {display:block; text-align: center;}
+/* #app{position: sticky; left: 2150px; top: 775px;} */
+  header {
+    max-width:100%;
+    max-height:200px;
+    height:200px;
+    background-color:var(--header-bg);
+    background-image:url("/header.jpg");
+    background-repeat:repeat-y; /* this prevents it from repeating horizontally */
+    background-size:1750px; /* I had to play with this value in CodePen to find the perfect size */
+    background-position:fixed; /* this prevents the image from shifting when the page is resized */
+    background-color:var(--header-bg);
+  }
+  nav {
+    max-height:100%;
+    /* height:25px; */
+    max-width:100%;
+    background-color:var(--nav-bg);
+    color:var(--nav-link-color);
+  }
+  aside {
+    width:150px;
+    max-width:100%;
+    height:100vh;
+    background-color:var(--aside-bg);
+  }
+  main {
+    width:100%;
+  }
+  section {
+    /* margin-bottom:10px; */
+    color:var(--sidebar-text-color);
+  }
+  article {
+    margin-bottom:15px;
+    margin-top:15px;
+    margin-left:15px;
+    background-color:var(--article-bg);
+    color:var(--article-text-color);
+  }
+  .flex {
+    display:flex;
+    flex-direction:row;
+  }
+  .nav {
+    margin-top:0px; 
+    margin-bottom:0px;
+  }
+  .nav li {
+    display:inline-block;
+    padding-left:30px;
+    font-family:"cool";
+  }
+  .nav li a { 
+    text-decoration:none; /* this makes the navbar links have no underline */
+    text-transform:uppercase; /* this forces all navbar text to uppercase */
+  }
+  .section {
+    color:var(--sidebar-text-color);
+  }
+  .subtitle {
+    text-transform:lowercase;
+    color:var(--article-heading-color);
+    font-weight:bold;
+    font-size:20px;
+    font-family:"cool";
+    letter-spacing:4px; /* this spaces out the letters like in the original layout */
+  }
+  article.subtitle { /* this selects all .subtitle divs inside of the article div */
+    text-transform:uppercase;
+    font-size:24px;
+    color:var(--article-heading-color);
+  }
+  .links {
+    list-style-type:none;
+    padding-left:0;
+  }
+  .links li a {
+    text-decoration:none;
+    color:inherit; /*  'inherit' means that the element inherits the text color of its parent */
+    font-family:"cool";
+  }
+
+  @media screen and (max-width:300px) {
+    nav {
+        max-height:100%;
+        display:flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+    }
+} 
